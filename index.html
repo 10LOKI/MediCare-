@@ -23,12 +23,11 @@
         </div>
     </div>
     <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
-        <div class="text-md font-bold text-white lg:flex-grow">
+        <div class="text-md font-bold text-white lg:flex-grow font-serif">
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
             <a href="#responsive-header" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Contacter nous</a>
         </div>
-        <!-- This is an example component -->
         <div class="relative mx-auto text-gray-600 lg:block hidden">
             <input class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Rechercher">
             <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
@@ -40,5 +39,67 @@
         </div>
     </div>
 </nav>
+
+
+<div class="relative h-screen w-full">
+    <div class="carousel-container w-full max-w-4xl mx-auto my-8 overflow-hidden rounded-lg shadow-lg absolute inset-0"> 
+        <div class="slides-container flex transition-transform duration-500 ease-in-out">
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil1.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil2.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil3.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil4.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil5.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil6.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+            <div class="slide w-full shrink-0">
+                <img src="/images/conseil7.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
+                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
+                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+            </div>
+        </div>
+
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">MediCare+™</a>.      All Rights Reserved.</span>
+</footer>
+    <script src="/assets/main.js"></script>
 </body>
 </html>

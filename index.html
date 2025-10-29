@@ -24,8 +24,10 @@
     </div>
     <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
         <div class="text-md font-bold text-white lg:flex-grow font-serif">
-            <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
-            <a href="#responsive-header" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
+            <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
+            <a href="/pages/medecins.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Médecins</a>
+            <a href="/pages/rendez-vous.html" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
+            <a href="/pages/suivie.html" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Suivie santé</a>
             <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Contacter nous</a>
         </div>
         <div class="relative mx-auto text-gray-600 lg:block hidden">
@@ -41,58 +43,109 @@
 </nav>
 
 
-<div class="relative h-screen w-full">
-    <div class="carousel-container w-full max-w-4xl mx-auto my-8 overflow-hidden rounded-lg shadow-lg absolute inset-0"> 
-        <div class="slides-container flex transition-transform duration-500 ease-in-out">
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil1.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
+<section class="bg-gray-50 py-12 md:py-20">
+    <div class="container mx-auto px-4">
+
+        <div class="carousel-container relative w-full max-w-5xl mx-auto overflow-hidden rounded-xl shadow-2xl aspect-video"> 
+            
+            <div class="slides-container flex h-full transition-transform duration-700 ease-in-out">
+                
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons1.jpg" alt="Hydratation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Hydratez-vous
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            L'eau est essentielle à votre énergie et à votre bien-être.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons2.jpg" alt="Manger équilibré" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Mangez équilibré
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            Nourrissez votre corps avec des aliments variés et frais.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons3.jpg" alt="Bouger plus" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Bougez plus
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            Une activité physique régulière renforce votre corps et libère votre esprit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons4.jpg" alt="Dormir bien" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Dormez bien
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            Un sommeil de qualité est crucial pour votre santé physique et mentale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons5.jpg" alt="Méditation" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Méditez
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            Prenez quelques minutes chaque jour pour respirer et vous recentrer.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons6.jpg" alt="Consultation médicale" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Consultez
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            N'hésitez jamais à consulter un professionnel de santé.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide w-full shrink-0 relative h-full">
+                    <img src="/images/cons7.jpg" alt="Déconnexion des écrans" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-transparent p-4">
+                        <h2 class="text-white text-4xl md:text-6xl font-extrabold text-center [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)]">
+                            Déconnectez
+                        </h2>
+                        <p class="text-white text-lg md:text-2xl mt-4 text-center max-w-2xl [text-shadow:1px_1px_4px_rgba(0,0,0,0.9)]">
+                            Faites des pauses régulières loin de vos écrans.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil2.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil3.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil4.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil5.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil6.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
-            <div class="slide w-full shrink-0">
-                <img src="/images/conseil7.png" alt="Conseils Pour une bonne santé" class="w-full object-cover h-full">
-                <h1 class="text-black text-7xl font-extrabold">MediCare+</h1>
-                <p class="text-black text-3xl">plateforme de consultations et de suivi médical en ligne</p>
-            </div>
+
+            <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+            </button>
+            <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors z-10">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+            </button>
         </div>
 
-        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-            </svg>
-        </button>
-        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-800">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-            </svg>
-        </button>
     </div>
-</div>
+</section>
 
 
 

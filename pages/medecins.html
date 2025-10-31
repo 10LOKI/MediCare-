@@ -6,159 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
     <title>MediCare+</title>
+    <script src="../scripts/search.js" defer></script>
+    <script src="../scripts/cards.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <nav class="flex items-center justify-between flex-wrap bg-blue-400 py-4 lg:px-12 shadow ">
-        <div class="flex justify-between lg:w-auto w-full lg:border-b-0 pl-16 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
-            <div class="flex items-center shrink-0 mr-16">
-                <img src="../images/logo_medicare.png" alt="My Navbar logo" class="h-12 w-auto">
-            </div>
-            <div class="block lg:hidden ">
-                <button id="nav" class="flex items-center px-3 py-2 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700">
-                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                        </svg>
-                </button>
-            </div>
+<nav class="flex items-center justify-between flex-wrap bg-blue-400 p-4 lg:px-12 shadow">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+        <div class="flex items-center shrink-0 mr-16">
+            <img src="../images/logo_medicare.png" alt="My Navbar logo" class="h-12 w-auto">
         </div>
-        <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
-            <div class="text-md font-bold text-white lg:flex-grow font-serif">
-                <a href="../index.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
-                <a href="/pages/medecins.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Médecins</a>
-                <a href="/pages/rendez-vous.html" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
-                <a href="/pages/suivie.html" class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Suivie santé</a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Contacter nous</a>
-            </div>
-            <div class="relative mx-auto text-gray-600 lg:block hidden">
-                <input class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Rechercher">
-                <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
-                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
-                        <path
-                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
-                    </svg>
-                </button>
-            </div>
+        <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
         </div>
-    </nav>
-
-    <div class="text-center py-16 md:py-24">
-        <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Votre <mark class="px-2 text-white bg-blue-600 rounded-sm dark:bg-blue-500">santé</mark>, notre priorité absolue</h2>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Nous nous engageons à vous fournir des soins experts et une attention personnalisée pour vous aider à vivre mieux, chaque jour.</p>
     </div>
 
-    <div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc1.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Said Fetah</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Cardiologue</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité :  Disponible dès demain</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
+    <div id="nav-content" class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto lg:px-3">
+        <div class="text-md font-bold text-white lg:flex-grow font-serif">
+            <a href="../index.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
+            <a href="../pages/medecins.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Médecins</a>
+            <a href="../pages/rendez-vous.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
+            <a href="../pages/contact.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Contacter nous</a>
+        </div>
+        <div class="relative mx-auto text-gray-600 lg:block hidden">
+            <input id="search" class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Rechercher">
+            <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+                <img src="../images/search-line-icon.webp" alt="Search Icon" class="h-4 w-4">
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="p-8 bg-gray-50">
+    <div class="container mx-auto flex flex-col md:flex-row gap-6 items-center">
+        <div class="w-full md:w-1/2">
+            <label for="filtre-specialite" class="block text-sm font-medium text-gray-700 mb-1">Filtrer par spécialité</label>
+            <select id="filtre-specialite" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Toutes les spécialités</option>
+                </select>
         </div>
 
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc2.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Mehdi Mouhib</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Pédiatre</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité :  Nouveaux patients acceptés</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc3.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Karim Saidi</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Dermatologue</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité :  Disponible aujourd'hui</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc4.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Youssef Benjelloun</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Médecin généraliste</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité :  Prend les urgences</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc5.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Houssam Miqri</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Ophtalmologue</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité : Disponible cette semaine</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc6.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Lamia El Fassi</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Gynécologue</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité : Consultations sur rendez-vous</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc7.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Loubna Sari3a</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Neurologue</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité : Prochain rendez-vous : Lundi</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
-            </div>
-        </div>
-
-        <div class="flex flex-col bg-white shadow-sm border border-slate-200 rounded-lg my-6 w-96">
-            <div class="m-2.5 overflow-hidden rounded-md h-80 flex justify-center items-center">
-                <img class="w-full h-full object-contain" src="../images/doc8.jpg" alt="profile-picture" />
-            </div>
-            <div class="p-6 text-center">
-                <h4 class="mb-1 text-xl font-semibold text-slate-800">Dr. Hmida Lamba</h4>
-                <p class="text-base text-slate-600 mt-4 font-light "> Spécialité: Dentiste</p>
-                <p class="text-base text-slate-600 mt-4 font-light "> Disponibilité : Disponible pour un détartrage</p>
-            </div>
-            <div class="flex justify-center p-6 pt-2 gap-7">
-                <button class="min-w-32  rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">Réserver un rendez-vous</button>
+        <div class="w-full md:w-1/2 self-end">
+            <div class="flex items-center p-2 border border-transparent rounded-md">
+                <input type="checkbox" id="filtre-dispo" class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                <label for="filtre-dispo" class="ml-2 block text-sm font-medium text-gray-900">Afficher uniquement les médecins disponibles</label>
             </div>
         </div>
     </div>
+</div>
+<div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+    </div>
+
+<footer>
+<div class="p-8 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-screen-xl mx-auto text-center">
+        <span class="block text-lg font-semibold text-gray-600 dark:text-gray-300">
+            © 2023 <a href="https://flowbite.com/" class="hover:underline text-xl">MediCare+™</a>. Tous Droits Réservés.
+        </span>
+        <p class="mt-2 text-base text-gray-500 dark:text-gray-400">
+            Votre partenaire de confiance pour des solutions de santé.
+        </p>
+    </div>
+</div>
+</footer>
+<script src="/scripts/navBar.js"></script>
 </body>
 </html>

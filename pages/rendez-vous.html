@@ -4,18 +4,131 @@
     <meta charset="UTF-8">
     <meta name="description" content="plateforme de consultations et de suivi médical en ligne">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <title>MediCare+</title>
+    <script src="../scripts/search.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <header>
-        <ul class="nav-links">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </header>
-</body>
+<nav class="flex items-center justify-between flex-wrap bg-blue-400 p-4 lg:px-12 shadow">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+        <div class="flex items-center shrink-0 mr-16">
+            <img src="../images/logo_medicare.png" alt="My Navbar logo" class="h-12 w-auto">
+        </div>
+        <div class="block lg:hidden">
+            <button id="nav-toggle" class="flex items-center px-3 py-2 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="nav-content" class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto lg:px-3">
+        <div class="text-md font-bold text-white lg:flex-grow font-serif">
+            <a href="../index.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Explorer MediCare+ 🔽</a>
+            <a href="../pages/medecins.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Médecins</a>
+            <a href="../pages/rendez-vous.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Rendez-vous</a>
+            <a href="../pages/contact.html" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2">Contacter nous</a>
+        </div>
+        <div class="relative mx-auto text-gray-600 lg:block hidden">
+            <input id="search" class="border-2 border-gray-300 bg-white h-10 pl-2 pr-8 rounded-lg text-sm focus:outline-none" type="search" name="search" placeholder="Rechercher">
+            <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+                <img src="../images/search-line-icon.webp" alt="Search Icon" class="h-4 w-4">
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="text-center py-16 md:py-24">
+    <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Prendre rendez-vous</h2>
+    <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Planifions votre rendez-vous</p>
+    <a href="#rendez-vous" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">Prendre rendez-vous
+        <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+    </svg>
+    </a>
+</div>
+
+<div class="text-center py-16 md:py-24 bg-white ">
+    <div class="max-w-4xl mx-auto px-4 text-left">
+        <h3 class="text-blue-900 font-bold text-3xl mb-6">Éléments à prendre en compte avant de planifier un rendez-vous</h3>
+        <p class="text-gray-500 dark:text-gray-400 text-xl">De quel type de rendez-vous avez-vous besoin ?<br> Les différents types de rendez-vous sont facturés différemment à l’assurance maladie ; <br>il est donc important d’indiquer au cabinet le motif de votre consultation. <br>Voici quelques exemples : <br>
+        - Services de santé mentale <br>
+        - Coordination des soins (pour les patients atteints de maladies chroniques et de nombreux spécialistes) <br>
+        - Soins préventifs, examens médicaux et bilans de santé <br>
+           - Vaccinations <br>
+           - Dépistage systématique du cancer et d'autres maladies <br>
+           - Soins de santé pour enfants et adultes <br> <br>
+        - Rendez-vous le jour même <br>
+        - Médecine des voyages, y compris les vaccinations <br>
+        Si vous présentez de nouveaux symptômes dont vous souhaitez parler, ou si vous n'êtes pas certain(e) du type de rendez-vous dont vous avez besoin, veuillez nous en informer lors de la prise de rendez-vous.</p>
+    </div>
+</div>
+
+
+<div id="rendez_vous" class="bg-white flex items-center justify-center min-h-screen">
+    <div class="bg-blue-400 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Prendre un rendez-vous</h2>
+
+        <form id="rendez-vous">
+            <div class="mb-4">
+                <label for="nom" class="block text-gray-700 font-medium mb-2">Nom</label>
+                <input type="text" id="nom" name="nom" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <p id="nom-error" class="text-red-500 text-sm mt-1 hidden">Le nom est obligatoire.</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="prenom" class="block text-gray-700 font-medium mb-2">Prenom</label>
+                <input type="text" id="prenom" name="prenom" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <p id="prenom-error" class="text-red-500 text-sm mt-1 hidden">Le prenom est obligatoire.</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer une adresse email valide.</p>
+            </div>
+
+            <div class="mb-4">
+                <label for="date" class="block text-gray-700 font-medium mb-2">Date du rendez-vous</label>
+                <input type="date" id="date" name="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <p id="date-error" class="text-red-500 text-sm mt-1 hidden">Veuillez choisir une date future.</p>
+            </div>
+
+            <div class="mb-6">
+                <label for="doctor" class="block text-gray-700 font-medium mb-2">Choisir un médecin</label>
+                <select id="doctor" name="doctor" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    <option value="">-- Veuillez choisir --</option>
+                    <option value="dr-dupont">Dr. Said Fetah (Cardiologue)</option>
+                    <option value="dr-durand">Dr. Mehdi Mouhib (Pédiatre)</option>
+                    <option value="dr-martin">Dr. Karim Saidi(Dermatologue)</option>
+                    <option value="dr-martin">Dr. Youssef Benjelloun(généraliste)</option>
+                    <option value="dr-martin">Dr. Houssam Miqri (Ophtalmolgue)</option>
+                    <option value="dr-martin">Dr. Lamia El Fassi (Gynécologue)</option>
+                    <option value="dr-martin">Dr. Loubna Sari3a (Neuroloque)</option>
+                    <option value="dr-martin">Dr. Hmida Lamba (Dentiste)</option>
+                    
+                </select>
+                <p id="doctor-error" class="text-red-500 text-sm mt-1 hidden">Le choix du médecin est obligatoire.</p>
+            </div>
+
+            <button type="submit" id="submit-btn" class="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed" >Prendre rendez-vous</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <div class="p-8 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-screen-xl mx-auto text-center">
+            <span class="block text-lg font-semibold text-gray-600 dark:text-gray-300">
+                © 2023 <a href="https://flowbite.com/" class="hover:underline text-xl">MediCare+™</a>. Tous Droits Réservés.
+            </span>
+            <p class="mt-2 text-base text-gray-500 dark:text-gray-400">
+                Votre partenaire de confiance pour des solutions de santé.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="/scripts/navBar.js"></script>
+
+    </body>
 </html>
